@@ -1,0 +1,25 @@
+---
+import {
+  BotIcon,
+  ChartSplineIcon,
+  FootprintsIcon,
+  LaptopMinimalCheckIcon,
+} from "lucide-react";
+import TypographyH1 from "./TypographyH1.astro";
+import { Badge } from "./ui/badge";
+
+import { CustomAccordion } from "./custom-accordion/custom-accordion";
+---
+
+<section class="py-24 px-6" id={"how-it-works"}>
+  <main class="max-w-5xl mx-auto w-full">
+    <div class="flex flex-col items-center justify-center gap-6 mb-24">
+      <Badge variant={"outline"}>Como Funciona</Badge>
+      <TypographyH1 text="em 4 passos simples" />
+    </div>
+
+    <div>
+      <CustomAccordion client:load />
+    </div>
+  </main>
+</section>

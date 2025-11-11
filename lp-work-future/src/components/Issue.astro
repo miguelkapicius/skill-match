@@ -1,0 +1,121 @@
+---
+import TypographyH1 from "./TypographyH1.astro";
+import { Badge } from "./ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Image } from "astro:assets";
+---
+
+<section class="" id="issue">
+  <main class="max-w-5xl mx-auto w-full px-6">
+    <div class="flex flex-col items-center justify-center gap-6 mb-24">
+      <Badge className="" variant={"outline"}>O Problema</Badge>
+      <TypographyH1 text="o mundo muda rápido e o trabalho muda junto" />
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
+      <Card className="col-span-full relative group">
+        <div class="md:w-2/3">
+          <CardHeader>
+            <CardTitle>Máquinas evoluem. Profissões desaparecem.</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <CardDescription
+              >A automação e a inteligência artificial estão transformando o
+              mercado de trabalho em ritmo acelerado. Tarefas repetitivas, que
+              antes dependiam de pessoas, agora são executadas por sistemas
+              autônomos e robôs.</CardDescription
+            >
+            <CardDescription>
+              O resultado é claro: muitas funções estão sendo substituídas por
+              tecnologia, deixando milhões de trabalhadores inseguros sobre seu
+              futuro profissional.
+            </CardDescription>
+          </CardContent>
+        </div>
+        <div class="absolute -top-10 -right-5 lg:-top-20 lg:right-10">
+          <Image
+            src="/person.webp"
+            loading={"lazy"}
+            alt="Aurora"
+            class="w-24 lg:w-80 group-hover:scale-110 duration-300"
+            draggable="false"
+            width={400}
+            height={400}
+            format="webp"
+          />
+        </div>
+      </Card>
+      <Card className="col-span-1 relative group">
+        <CardHeader>
+          <CardTitle>Quer aprender, mas não sabe por onde começar.</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          <CardDescription
+            >A maioria dos trabalhadores afetados pela automação não possui as
+            habilidades necessárias para ocupar os novos cargos criados pela
+            tecnologia.</CardDescription
+          >
+          <CardDescription>
+            Falta orientação sobre quais competências desenvolver, onde estudar
+            e como se adaptar às novas exigências do mercado.
+          </CardDescription>
+          <CardDescription>
+            Sem um direcionamento claro, o aprendizado se torna caro,
+            desorganizado e ineficiente
+          </CardDescription>
+        </CardContent>
+        <div class="absolute top-1/4 -left-8 lg:-left-20 rotate-66">
+          <Image
+            src="/mouse.webp"
+            alt="Aurora"
+            loading={"lazy"}
+            class="w-16 lg:w-32 group-hover:scale-110 duration-300"
+            draggable="false"
+            width={400}
+            height={400}
+            format="webp"
+          />
+        </div>
+      </Card>
+      <Card className="col-span-1 relative group">
+        <CardHeader>
+          <CardTitle
+            >Empresas com vagas abertas. Pessoas sem oportunidades.</CardTitle
+          >
+        </CardHeader>
+        <CardContent className="space-y-2">
+          <CardDescription
+            >Enquanto muitos profissionais lutam para se recolocar, as empresas
+            enfrentam o problema oposto: faltam candidatos qualificados para as
+            novas funções.</CardDescription
+          >
+          <CardDescription>
+            Esse desencontro entre oferta e demanda gera desemprego tecnológico,
+            aumento das desigualdades sociais e perda de competitividade.
+          </CardDescription>
+          <CardDescription>
+            Estamos diante de um paradoxo: nunca houve tantas oportunidades — e
+            nunca foi tão difícil alcançá-las.
+          </CardDescription>
+        </CardContent>
+        <div class="absolute -bottom-6 -right-4 lg:-bottom-16 lg:-right-12">
+          <Image
+            src="/enter.webp"
+            alt="Aurora"
+            loading={"lazy"}
+            class="w-16 lg:w-32 group-hover:scale-110 duration-300"
+            draggable="false"
+            width={400}
+            height={400}
+            format="webp"
+          />
+        </div>
+      </Card>
+    </div>
+  </main>
+</section>

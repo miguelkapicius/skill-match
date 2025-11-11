@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import { ArrowRight, BriefcaseBusinessIcon } from "lucide-react";
+import { Button } from "./ui/button";
+---
+
+<section
+  class="w-screen h-[80vh] bg-[url(/hero.webp)] bg-cover md:bg-fixed bg-center relative px-6"
+>
+  <main
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 flex flex-col items-center gap-6"
+  >
+    <div
+      class="w-full rounded-full bg-neutral-950/50 text-xs md:text-base px-6 py-2 flex items-center justify-center gap-3 ring-2 ring-[#6FB6E2]"
+    >
+      <BriefcaseBusinessIcon />
+      O futuro do trabalho começa com você.
+    </div>
+    <div class="flex flex-col gap-1">
+      <Image
+        src="/logo-lg.svg"
+        alt="Skill Match"
+        draggable="false"
+        loading={"lazy"}
+        width={400}
+        height={400}
+        format="png"
+      />
+
+      <div
+        class="h-2 bg-linear-90 from-[#9CDFB7] to-[#6FB6E2] animate-expand rounded-full"
+      >
+      </div>
+      <a>
+        <Button size="xl" variant={"secondary"} className="mt-6">
+          Quero me requalificar <ArrowRight />
+        </Button>
+      </a>
+    </div>
+  </main>
+</section>

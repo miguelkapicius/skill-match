@@ -1,0 +1,62 @@
+---
+import { Header } from "@/components/header/header";
+import "../styles/global.css";
+import Interprises from "@/components/Interprises.astro";
+import Hero from "@/components/Hero.astro";
+import Issue from "@/components/Issue.astro";
+import Solution from "@/components/Solution.astro";
+import HowItWorks from "@/components/HowItWorks.astro";
+import SocialImpact from "@/components/SocialImpact.astro";
+import { Image } from "astro:assets";
+import { NavigationMenuComponent } from "@/components/header/navigation-menu";
+---
+
+<html lang="pt-BR" class="dark scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo-sm.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+      rel="stylesheet"
+    />
+    <title>Skill Match</title>
+  </head>
+
+  <body class="min-h-screen w-screen overflow-x-hidden antialiased">
+    <div class="mb-40">
+      <Header client:load />
+      <Hero />
+      <Interprises />
+    </div>
+    <Issue />
+    <div
+      class="bg-[url(/pattern-sm.webp)] lg:bg-[url(/pattern-lg.webp)] bg-cover w-screen mt-40 space-y-40"
+    >
+      <Solution />
+      <HowItWorks />
+      <SocialImpact />
+    </div>
+    <footer class="px-6 h-80">
+      <div
+        class="flex items-center justify-between flex-1 h-full max-w-5xl mx-auto"
+      >
+        <Image
+          src={"/logo-md.svg"}
+          alt="Skill Match"
+          draggable="false"
+          loading={"lazy"}
+          class="w-60"
+          width={530}
+          height={64}
+          format="svg"
+        />
+
+        <NavigationMenuComponent />
+      </div>
+    </footer>
+  </body>
+</html>

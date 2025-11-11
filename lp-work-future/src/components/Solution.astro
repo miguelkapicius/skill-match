@@ -1,0 +1,97 @@
+---
+import {
+  BotIcon,
+  ChartSplineIcon,
+  FootprintsIcon,
+  LaptopMinimalCheckIcon,
+  SmilePlusIcon,
+} from "lucide-react";
+import TypographyH1 from "./TypographyH1.astro";
+import { Badge } from "./ui/badge";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription,
+} from "./ui/card";
+
+const solution = [
+  {
+    icon: LaptopMinimalCheckIcon,
+    title: "Cadastro inteligente",
+    description:
+      "O usuário informa sua profissão, experiência, formação e áreas de interesse. A plataforma entende seu ponto de partida",
+  },
+  {
+    icon: BotIcon,
+    title: "Análise de mercado com IA",
+    description:
+      "Nos bastidores, o sistema cruza esse perfil com milhares de vagas reais de emprego e identifica as habilidades mais valorizadas em ascensão.",
+  },
+  {
+    icon: FootprintsIcon,
+    title: "Geração da trilha personalizada",
+    description:
+      "Com base nessa análise, a IA monta um plano de aprendizado individual, sugerindo cursos, certificações e conteúdos relevantes — muitos deles gratuitos.",
+  },
+  {
+    icon: ChartSplineIcon,
+    title: "Acompanhamento e evolução",
+    description:
+      "Conforme o usuário progride, o sistema atualiza suas recomendações e mostra como cada nova habilidade aumenta suas chances de empregabilidade.",
+  },
+];
+---
+
+<section class="py-24 px-6" id={"solution"}>
+  <main class="max-w-5xl mx-auto w-full">
+    <div class="flex flex-col items-center justify-center gap-6 mb-24">
+      <Badge variant={"outline"}>A Solução</Badge>
+      <TypographyH1
+        text="sua nova profissão começa com inteligência artificial"
+      />
+      <CardDescription className="text-center">
+        A SkillMatch nasce para mudar esse cenário, usando inteligência
+        artificial para aproximar trabalhadores das habilidades e profissões do
+        futuro.
+      </CardDescription>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      {
+        solution.map((item) => (
+          <Card>
+            <CardHeader className="flex items-center gap-3">
+              <item.icon className="size-8 text-[#6FB6E2]" />
+              <CardTitle>{item.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>{item.description}</CardDescription>
+            </CardContent>
+          </Card>
+        ))
+      }
+      <Card className="col-span-full">
+        <CardHeader className="flex items-center gap-3">
+          <SmilePlusIcon className="size-8 text-[#6FB6E2]" />
+          <CardTitle>Por que é diferente</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          <CardDescription
+            >A SkillMatch não é apenas uma plataforma de cursos.</CardDescription
+          >
+          <CardDescription
+            >Ela é um assistente de carreira inteligente, que entende o perfil
+            de cada pessoa e a conecta diretamente com o que o mercado precisa.</CardDescription
+          >
+          <CardDescription
+            >Enquanto outras ferramentas oferecem listas genéricas de cursos, a
+            SkillMatch oferece um caminho real e direcionado para o futuro
+            profissional de cada usuário.</CardDescription
+          >
+        </CardContent>
+      </Card>
+    </div>
+  </main>
+</section>
